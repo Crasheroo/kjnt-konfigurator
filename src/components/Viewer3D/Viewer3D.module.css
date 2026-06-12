@@ -1,0 +1,93 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-primary);
+}
+
+.canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dimLabel {
+  background: rgba(5, 5, 5, 0.75);
+  border: 1px solid var(--accent-border);
+  color: var(--accent-light);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  letter-spacing: 0.02em;
+}
+
+.toolbar {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  background: rgba(14, 14, 14, 0.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: 8px 12px;
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-md);
+}
+
+.toolBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast), color var(--transition-fast);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.toolBtn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-primary);
+}
+
+.toolBtn.active {
+  background: var(--accent-dim);
+  color: var(--accent);
+}
+
+.loadingOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  gap: 10px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
