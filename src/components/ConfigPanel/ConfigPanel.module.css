@@ -1,0 +1,117 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.statsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: var(--space-4) var(--space-5);
+  background: var(--accent-dim);
+  border-bottom: 1px solid var(--accent-border);
+  flex-shrink: 0;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.statVal {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+
+.statLbl {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.statDivider {
+  width: 1px;
+  height: 28px;
+  background: var(--accent-border);
+}
+
+.sections {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--text-tertiary);
+  margin-bottom: -4px;
+}
+
+.infoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+}
+
+.infoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.infoKey {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.infoVal {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.note {
+  font-size: 11px;
+  color: var(--text-tertiary);
+  line-height: 1.5;
+  padding: var(--space-2) 0;
+}
+
+.footer {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.resetBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--text-tertiary);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 8px 14px;
+  width: 100%;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast), color var(--transition-fast);
+}
+
+.resetBtn:hover {
+  background: var(--bg-card-hover);
+  color: var(--text-secondary);
+}
